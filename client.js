@@ -13,9 +13,17 @@ const connect = function() {
 
   conn.on('data', (data) => {
     console.log('Server says: ', data);
-    
   });
+
+  conn.on('connect', () => {
+    console.log('YOU ARE IN THE GAME');
+    conn.write('Name: REW');
+  });
+
+  //conn.on()
+
   return conn;
+
 }
 
 //console.log('Connecting ...');

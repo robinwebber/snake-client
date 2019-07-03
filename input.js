@@ -23,6 +23,9 @@ const setupInput = function(conn) {
     if (key === "d") {
       connection.write("Move: right");
     }
+    if (key === "f") {
+      connection.write("Say: Eat my tail!");
+    }
   });
 
   return stdin;
